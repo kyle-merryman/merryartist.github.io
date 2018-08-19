@@ -1,56 +1,250 @@
-body {
-    background-color: #efeee7;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #333333;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333333;
+a {
+    text-decoration: none;
+    color: #cccccc;
 }
 
 h1 {
-    color: #eee;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
     font-size: 28px;
-    margin: 20px;
-    padding: 20px;
 }
 
-h2 {
-    font-size: 24px;
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #777777;
 }
 
-.container {
-    width: 1024px;
+body {
+    margin:0 200px 0 0;
+    padding:0;
+    background-image: url("https://www.walldevil.com/wallpapers/a81/twitter-background-designs-daily-desktopdesign.jpg");
+}
+
+ul {list-style: none}
+
+li {
+    display: inline-block;
+    margin: 0 15px 0 0;
+}
+
+/* Above: generic */
+
+
+
+.header {
+    width: 102%;
+    height: 77px;
+    padding: 0 0 0 15%;
+    border-collapse: separate;
+    border-bottom: 2.25px solid #cccccc;
+    border-spacing: 0 0 70% 0;
     margin: 0 auto;
+    z-index: 90;
+    background-color: white;
+    position: relative;
 }
 
-#main-bio {
-    float: left;
-    width: 70%;
-    margin: 20px;
-}
+    .name {
+        position: absolute;
+        background-color: #4aaaa5;
+        width: 260px;
+        margin: -10px, 0px, -40px, 50%;
+        padding: 10px 6px 0px 30px; 
+    }
 
-#contact-info {
-    float: left;
-    width: 30%;
-    line-height: 1.5x;
-}
+    .menu {
+        position: absolute;
+        margin: 30px 0px 0px 50%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 115%;
+        float: left;
+        color: #cccccc;
+        z-index: 100;
+    }
 
-#bio-image {
-    float: left;
-    width: 200px;
-}
+        #about {
+            float: left;
+            width: 120px;
+            padding: 0 0 0 30px;
+            border-right: 2px;
+            border-right-style: solid;
+            border-right-color: #cccccc;
+            margin: 0 0 0 -100%;
+        }
 
-a:link {
-    color: #d21034;
-}
+        #portfolio {
+            float: left;
+            width: 120px;
+            padding: 0 0 0 30px;
+            border: 2px;
+            margin: 0 0 0 -70%;
+        }
 
-a:hover {
-    color: #399bb6;
-}
+        #contact {
+            float: left;
+            width: 120px;
+            padding: 0 0 0 30px;
+            border-left: 2px;
+            border-left-style: solid;
+            border-left-color: #cccccc;
+            margin: 0 0 0 -30%;
+        }
 
-a:active {
-    color: #e1b6ca;
-}
+/* Above: Header (same for each page) */
+
+    .content {
+        background-color: #ffffff;
+        width: 960px;
+        margin-left: 27%;
+        margin-right: 73%;
+        width: 60%;
+        height: px;
+    }
+
+        #aboutMe {
+                color: #4aaaa5;
+                border-bottom: 3px;
+                border-bottom-style: solid;
+                border-bottom-color: #dddddd;
+                padding: 0 0 0 0;
+                z-index: 100;
+                margin: 50px 5% 0 5%;
+        }
+
+        #aboutMe h1 {
+            color: #4aaaa5;
+            margin: 20px 0 0 0;
+            padding: 20px 0 0 0;
+        }
+
+        #portrait {
+            float: left;
+            padding: 20px 35px 30px 48px;
+            z-index: 2;
+        }
+                
+        .summary {
+            margin: 0 30px -18px 30px;
+            padding: 0 0 15px 0;
+            z-index: 2;
+        }
+    /* Above: only index.html */
+
+        .enterbox {
+            background-color: white;
+            margin: 5% 25% 500px 25%;
+            float:left;
+        }
+
+            #portfolioTitle {
+                color: #4aaaa5;
+                font-size: 150%;
+                margin: 0 7% 0 7%;
+                padding: 30px 0 20px 40px;
+                border-bottom: 3px;
+                border-bottom-style: solid;
+                border-bottom-color: #dddddd;
+                background-color: white;
+            }
+
+            .form {
+                height: 40px;
+                padding: 0 0 0 40px;
+                font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+                color: #777777;
+                font-size: 80%;
+            }
+
+                label {
+                    width:180px;
+                    height:20px;
+                    clear:left;
+                    text-align:right;
+                    padding-bottom:10px;
+                    font-size: 130%;
+                }
+
+                    #inputName {
+                        width: 92%;
+                        height: 30px;
+                        font-size: 130%;
+                    }
+
+                    #inputEmail {
+                        width: 92%;
+                        height: 30px;
+                        font-size: 130%;
+                    }
+
+                    #inputMessage {
+                        width: 92%;
+                        height: 200px;
+                        font-size: 130%;
+                    }       
+
+                #submit {
+                    height: 30px;
+                    width: 80px;
+                    color: white;
+                    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+                    background-color: #4aaaa5;
+                    margin: 30px 0 0 0;
+                    font-size: 110%
+                }
+    
+        .Connect {
+            height: 200px;
+            width: 300px;
+            background-color: white;
+            float: right;
+            margin: 5% 0 0 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #4aaaa5;
+            text-align: center;
+        }
+
+            .withMe {
+                font-size: larger;
+                border-bottom: 2px;
+                border-bottom-style: solid;
+                border-bottom-color: #dddddd;
+                margin: 20px 12% 0 12%;
+                padding: 0 0 10px 0;
+                font-size: 150%;
+            }
+
+            .icons {
+                resize: 150%;
+            }
+
+                #linkedIn {
+                    color: yellowgreen;
+                }
+
+                #faceBook {
+                    color: #4aaaa5;
+                }
+
+                #instaGram {
+                    color: rgb(230, 230, 21);
+                }
+
+    /* Above: only form.html */
+
+        
+    /* Above: only portfolio.html */
+
+.footer {
+    clear: left;
+    position: relative;
+    background-color: #666666;
+    width: 117%;
+    border-top: 5px;
+    border-top-style: solid;
+    border-top-color: #4aaaa5;
+    margin: 0 0 -16px 0;
+    padding: 0 0 10px 0;
+    text-align: center;
+    }
+
+/* Above: footer (same for all pages) */
