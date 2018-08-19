@@ -226,11 +226,97 @@ li {
                 }
 
                 #instaGram {
-                    color: rgb(230, 230, 21);
+                    color: rgb(230, 227, 21);
                 }
 
     /* Above: only form.html */
 
+    .portfolioContainer {
+        background-color: white;
+        margin: 2% 30% 17% 33%;
+        height: 600px;
+        width: 600px;
+        padding: 0;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+        .portfolioTitle {
+            color: #4aaaa5;
+            font-size: 150%;
+            border-bottom: 2%;
+            border-bottom-style: solid;
+            border-color: #dddddd;
+            margin: 0 5% 0 5%;
+            padding: 5% 0 10px 0; 
+        }
+
+        .galleryContainer {
+            font-size: 115%;
+            margin: 30px 20px 20px 50px;
+            padding: 0 0 15px 0;
+            background-color: grey;
+            float: left;
+        }
+
+        .textStyle {
+            background-color: #4aaaa5;
+            margin: 60px 0 -10px 0;
+        }
+
+            #rpgContainer {
+                background-image: url("https://i.imgur.com/J080qHu.jpg");
+                min-width: 100px;
+                height: auto;
+            }
+                #rpgText {
+                    padding: 0 20px 0 20px;
+                }
+            
+            #filmContainer {
+                background-image: url("https://wtfbabe.files.wordpress.com/2015/03/birdman-37-watch-the-film-wtf-saint-pauly.jpg");
+                min-width: 100px;
+                height: auto;
+            }
+                #filmText {
+
+            }
+
+            #travelContainer {
+                background-image: url("https://lonelyplanetimages.imgix.net/mastheads/129607243_super.jpg?sharp=10&vib=20&w=1200");
+                min-width: 100px;
+                height: auto;
+            }
+                #travelText {
+
+                }
+
+            #hangContainer {
+                background-image: url("https://i.pinimg.com/originals/39/16/27/391627bae1d413f7ab52843997fef4e1.jpg");
+                min-width: 100px;
+                height: auto;
+            }
+                #hangText {
+
+                }
+            
+            #triviaContainer {
+                background-image: url("https://vignette.wikia.nocookie.net/logopedia/images/c/ca/TMYK1996.png/revision/latest?cb=20141218011320");
+                min-width: 100px;
+                height: auto;
+            }
+                #triviaText {
+
+                }
+
+            #foodContainer {
+                background-image: url("https://2.bp.blogspot.com/-SlTlr9Bnlwk/TxNhmHZEKsI/AAAAAAAACZc/aq1M2cvOnk0/s640/Ghormeh+Sabzi-TS.jpg");
+                min-width: 100px;
+                height: auto;
+            }
+                #foodText {
+
+                }
         
     /* Above: only portfolio.html */
 
