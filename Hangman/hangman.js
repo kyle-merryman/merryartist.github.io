@@ -19,28 +19,38 @@ function printUnderscore() {
         underscoreContainer.push("_");
     } 
     // document.getElementById("ww").append(printUnderscore());
-    document.getElementById
-    console.log(underscoreContainer);            
+    document.getElementById();
+    console.log(underscoreContainer);
+    document.getElementById("theWord").append(underscoreContainer); 
+    //document.getElementById("theWord").innerHTML = underscoreContainer;  
+    //$("theWord").html(underscoreContainer); 
 }
+
+printUnderscore();  
+
 //lettersGuessed.contains(userGuess)
 //if (underscoreContainer.join("") == arrayOfWinningWord.join(""));
 //else if (underscoreContainer.join("") == arrayOfWinningWord.join("")) {
     //console.log("You win!");
 
 //onkeyEvent
+
+if (underscoreContainer.join("") == arrayOfWinningWord.join("")) {
+    console.log("You win!");
+}
+if (guessCount = 0) {
+    console.log("you lose!");
+}
 document.onkeyup = function (event) {
     var userGuess = event.key.toLowerCase();
-    if (lettersGuessed.indexOf(userGuess) > -1 || ) {
+    if (lettersGuessed.indexOf(userGuess) > -1) {
         event.stopPropogation();
     } else {
-        guessCount--;
+        guessCount--; 
         lettersGuessed.push(userGuess);
         console.log(userGuess);
         console.log(lettersGuessed);
     } 
-    if (underscoreContainer.join("") == arrayOfWinningWord.join("")) {
-        console.log("You win!");
-    }
     // If letter is not in array, add it to list of absent letters
 
 
@@ -74,7 +84,7 @@ document.onkeyup = function (event) {
         
 
 
-printUnderscore();        
+      
 
 //if (userGuess = lettersGuess)
 }
