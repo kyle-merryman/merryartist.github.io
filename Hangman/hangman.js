@@ -1,12 +1,12 @@
 var wordList = ['tyrannosaurs', 'velociraptor', 'triceratops', 'brachiosaurus', 'stegosaurus', 'allosaurus', "funny", "jawbreaker", "jackpot", "witchcraft", "fishhook", "cobweb", "haiku", "zodiac", "xylophone", "vodka", "puppy"]     // array of words
 var winCheck = false;
-var wins = {counter: 0, currentGame: false};
+var wins = 0;
 var losses = 0;
 var ww = "";
 var underscoreContainer = [];
 var guessCount = 10;
 var lettersGuessed = [];
-var arrayOfWinningWord;
+
 document.getElementById("wins").append(wins.counter);
 document.getElementById("guessesLeft").append(guessCount);
 document.getElementById("lettersGuessed").append(lettersGuessed);
@@ -40,8 +40,8 @@ printUnderscore();
     if (underscoreContainer.join[i] !== arrayOfWinningWord.join[i]) {
         event.stopPropogation();
   } else {
-        wins.currentGame = true;
-        wins.counter++;
+        winCheck = true;
+        wins++;
   }
 
 
