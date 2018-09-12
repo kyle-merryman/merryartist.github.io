@@ -5,9 +5,13 @@ var wordToLetter = [];
 
 var winCheck = false;
 var wins = 0;
+    document.getElementById("wins").append(wins);
 var losses = 0;
+    document.getElementById("losses").append(losses);
 var guessesLeft = 10;
+    document.getElementById("guessesLeft").append(guessesLeft);
 var lettersGuessed = [];
+    document.getElementById("wins").append(lettersGuessed);
 
 //picks the word from wordList
 chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
@@ -100,9 +104,6 @@ $('#restartButton').on('click', function (e) {
     //redefine lettersGuessed as empty array
     lettersGuessed = [];
 })
-
-    
-
 
 
 //--------------------ERROR-TESTS----------------------
