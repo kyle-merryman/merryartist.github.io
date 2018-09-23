@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--looping-soundtrack-->
+    <!--<audio src="assets/2001.mp3" controls autoplay loop></audio>-->
+<style>
+    body {
+        background-color: black;
+        font-family: 'Play', sans-serif !important;
+        -ms-overflow-style: black;
+    }
+</style>
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>TRIVIA</title>
 </head>
 <body style="height: 100%"> <!--html height set to 100% | allow .bg to work-->
 
-    <!--dynamic background && fills entire view-->
+<!--dynamic background && fills entire view-->
 <div class="bg" style="background-image: url('https://thewallpaper.co/wp-content/uploads/2017/10/bluemobile-atmosphere-art-outer-space-tablet-backgrounds-up-planet-land-spacequiz.jpg'); height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover;">
     
     <!--SCORE pop-up-->
@@ -36,9 +46,9 @@
 
     <!--TITLE-->
     <div class="jumbotron jumbotron-fluid clearfix" style="background: rgba(200, 54, 54, 0.5) !important">
-        <div class="container" style="border-width: 2px; border-style: dashed; border-color: greenyellow">
+        <div class="container">
             <h1 class="display-4">TRIVIA</h1>
-            <p class="lead" style="opacity: 0.5%; height: 10px; line-height: 20px">trivia instructions</p>
+            <p class="lead" style="opacity: 0.5%; height: 10px; line-height: 20px">You think you know space?</p>
         </div>
     </div>
 
@@ -46,73 +56,59 @@
 
     <!--1-->
     <div class="container-fluid" style="background-color: lightskyblue">
-        <h2>Sample Question: Who has a beautiful soul</h2>
+        <h2>Q1 | Which nation landed a rover on an asteroid first?</h2>
         <div class="form-group">
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jesse McGurntey</label>
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jeezum MclHenney</label>
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">Jesse McCartney</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  USA</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  Russia</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">  Japan</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  China</label>
         </div>
     </div>
 
     <!--2-->
     <div class="container-fluid" style="background-color: lightskyblue">
-        <h2>Sample Question: Who has a beautiful soul</h2>
+        <h2>Q2 | NASA... what does it stand for?</h2>
         <div class="form-group">
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jesse McGurntey</label>
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jeezum MclHenney</label>
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">Jesse McCartney</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  National Astronautics and Space Administration</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">  National Astronautics and Space Association</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  National Aeronautics and Space Administration</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  Neil Aeronautics Success Administration</label>
         </div>
     </div>
 
     <!--3-->
     <div class="container-fluid" style="background-color: lightskyblue">
-        <h2>Sample Question: Who has a beautiful soul</h2>
+        <h2>Q3 | Who first orbited the Earth?</h2>
         <div class="form-group">
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jesse McGurntey</label>
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jeezum MclHenney</label>
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">Jesse McCartney</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  John Glenn</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">  Yuri Gagarin</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  Gherman S. Titov</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  Alan Shepard Jr.</label>
         </div>
     </div>
 
     <!--4-->
     <div class="container-fluid" style="background-color: lightskyblue">
-        <h2>Sample Question: Who has a beautiful soul</h2>
+        <h2>Q4 | What is Pluto categorized as?</h2>
         <div class="form-group">
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jesse McGurntey</label>
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jeezum MclHenney</label>
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">Jesse McCartney</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  greater asteroid</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  planet</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">  dwarf planet</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  minor planet</label>
         </div>
     </div>
     
     <!--5-->
-    <div class="container-fluid" style="background-color: lightskyblue">
-        <h2>Sample Question: Who has a beautiful soul</h2>
+    <div class="container-fluid" style="background-color: lightskyblue; margin-bottom: 98px">
+        <h2>Q5 | What is the most common type of star in the Milky Way?</h2>
         <div class="form-group">
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jesse McGurntey</label>
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jeezum MclHenney</label>
-            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">Jesse McCartney</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  red supergiant stars</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  white dwarf stars</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">  neutron stars</label>
+            <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">  red dwarf stars</label>
         </div>
     </div>
 
-    <!--6-->
-        <div class="container-fluid" style="background-color: lightskyblue">
-                <h2>Sample Question: Who has a beautiful soul</h2>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jesse McGurntey</label>
-                    <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jeezum MclHenney</label>
-                    <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">Jesse McCartney</label>
-                </div>
-            </div>
-
-    <!--7-->
-            <div class="container-fluid" style="background-color: lightskyblue">
-                <h2>Sample Question: Who has a beautiful soul</h2>
-                <div class="form-group">
-                    <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jesse McGurntey</label>
-                    <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice false">Jeezum MclHenney</label>
-                    <label class="radio-inline"><input type="radio" name="optradio" class="answerChoice true">Jesse McCartney</label>
-                </div>
-            </div>
 
     <!--STICKY FOOTER | contains timer and submit button-->
     <footer class="footer" style="position: fixed; bottom: 0; width: 100%; height: 80px; line-height: 80px; background-color: #f5f5f5">
@@ -172,9 +168,9 @@ var allQ = 7;
         intervalId = setInterval(count, 1000);
     }
 
-    function stopTime() {
+    /*function stopTime() {
         clearInterval(intervalId);
-    }
+    }*/
 
     function count() {
         time++;
@@ -196,7 +192,7 @@ var allQ = 7;
             minutes = "0" + minutes;
         }
 
-        if (minutes == 5) {
+        if (minutes == 3) {
             stopTime();
             $("timer").text("You got " + correctAnswers + " out of " + allQ + " answers correct.");
             console.log("You got " + correctAnswers + " out of " + allQ + " answers correct.");
@@ -210,7 +206,6 @@ var allQ = 7;
 
 //SUBMIT button function
 $("#submit").on("click", function() {
-    stopTime();
     //print you got correct out of total questions
     $("timer").text("You got " + correctAnswers + " out of " + allQ + " answers correct.");
     alert("You got " + correctAnswers + " out of " + allQ + " answers correct.");
@@ -324,4 +319,6 @@ $("#start").on("click", function() {
     console.log( $(trueList).find( $(this) ).html() );
     console.log(trueList);
 -->
+
+
 
