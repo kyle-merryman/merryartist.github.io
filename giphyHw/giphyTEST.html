@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fahkwang" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Favorite Genres</title>
+</head>
+
+
+<body>
+
+<!--background-->
+<div class="bg" style="background-image: url('https://previews.123rf.com/images/kentoh/kentoh0910/kentoh091000493/5803926-p%C3%B3ster-de-la-pel%C3%ADcula-de-cine-g%C3%A9neros-vintage-background.jpg'); height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover !important">
+    <!--main-section--fluid-->
+    <div class="container-fluid d-inline-flex p-2 bd-highlight" style="height: 100%; min-height: 100%; font-family: 'Fahkwang', sans-serif !important">
+    
+    
+      <!--centers content-->
+    <div class="row align-items-center" style="padding: 15% 35% 0 40% " >
+        <!--div-holding-buttons-->
+        <div class=row id="button-display">       
+        </div>
+
+        <!--form-to-type-and-submit-genre-->
+
+        <div class="card">
+          <div class="card-header bg-warning">what's your favorite genre?</div>
+          
+          <div class="card-body">
+            <form>
+              <div class=row>
+                <textarea class="form-control" id="genre-input" placeholder="enter genre"></textarea>
+                <button type="button" class="btn btn-outline-warning" id="submit" style="margin: 9% 0 0 30%">SUBMIT</button>
+              </div>
+            </form>
+          </div> 
+            
+          <div class="card-footer bg-warning"></div>
+        </div>
+
+        
+  
+        <!--div-holding-gifs-->
+        <div class=row id="gif-display">
+        </div>
+    </div>
+        
+
+    <!--sticky-footer-->
+    <footer class="footer bg-warning" style="position: fixed; bottom: 0; width: 100%; height: 80px; line-height: 80px">
+    </footer>
+    
+
+    </div>
+
+    
+</div>
+
+<!--END-OF-HTML---START-OF-SCRIPT-->
+
+<script>
+$(document).ready(function () {
+
+  //var containing initial buttons in array
+    var genreButtons = ["scifi", "mystery", "historical"];
+    
+    
+  //button refresh function
+    function renderButtons() {
+        console.log("renderbuttons function activated");
+
+        //clears buttons before updating
+        $("#button-display").empty();
+
+        // loop through array
+        for (var i = 0; i < genreButtons.length; i++) {
+        
+        //genre var takes button text and adds that to 'search' portion of url
+        var genre = genreButtons[i]; //MISSING .VAL && .TRIM
+        //url for Ajax call - contains genre parameter
+        var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + genre;
+        //variable representing the button
+        var b = $("<button>");
+        
+        // Adding genre class
+        b.addClass("genre");
+        // data attribute == string name in array at current index
+        b.attr("data-name", genreButtons[i]);
+        // button text == name of string at current index
+        b.text(genreButtons[i]);
+        //add custom url to button
+        b.attr("src", queryURL);
+        // adds named & valued button to display
+        $("button-display").append(b); //MISSING .VAL && .TRIM
+        }
+    }
+
+    renderButtons();
+
+
+
+  //submit button creates button and refreshes button selection
+    $("#submit").on("click", function(event) {
+      //gets genre entry - sets it = to var
+      var newGenre = $("#genre-input"); //MISSING .VAL && .TRIM
+      //appends that var (a string holding user's typed genre entry) to genre array
+      $(newGenre).appendTo(genreButtons);
+      //update buttons displayed - will include new button
+      renderButtons();
+    });
+  
+  
+  //clicking on button will generate gifs
+    $(".genre").on("click", function(event) {
+      console.log("button activated");
+
+      // clears gif display div
+      $("#gif-display").empty();
+
+      $.ajax({
+        //grabs button-specific URL
+        url: this.src,
+        method: "GET"
+      }).then(function(response) {
+
+        console.log(response);
+
+        // Saving the image_original_url property
+        var imageUrl = response.data.image_original_url;
+
+        // Creating and storing an image tag
+        var genreImage = $("<img>");
+
+        // sets genre gif url
+        genreImage.attr("src", imageUrl);
+        //sets genre gif alt text
+        genreImage.attr("alt", "genre image");
+        //sets genre gif id = #gif
+        genreImage.attr("id", "gif");
+
+        // push the gif to display div
+        $("#gif-display").html(genreImage);
+
+  //////clicking on a gif will play/pause it-----
+
+        $("#gif").on("click", function() {
+          console.log("gif clicked!");
+
+          // creates a useable var to help us manipulate data-state easier
+          var state = $(this).attr("data-state");
+          //if var is still, changes to animate
+          if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+          //if var is animated, changes to still
+          } else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+          }
+        });
+      });
+
+    });
+
+});
+</script>
+</html>
